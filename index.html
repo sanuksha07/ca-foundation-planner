@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><title>CA Foundation Planner</title>
+<link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#1d6a54"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes"><link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAIAAADdvvtQAAAC2ElEQVR42u3du1EDMRRAUdvjHohMQg9UYpowDRARENEAVUAl9EBCRhdkjAeMZ1er9eo9nRvxmWEW6SDtB/B6d9ivpNI2hkAACSABJIAkgASQABJAEkACSAAJIAkgASSABJAEkAASQAJIAEkACSABJIAkgASQABJAEkACSAAJIAkgASSAFL1tgu/h8+X15+3r+zsHbAUqnIy/7zpggEZMRvtTEu6AnQMJIAEkgCSABJAAUp6auBP99vjc+BdscwT2Tw9WINnCBJAEkAASQAJIAkgACSAB1HDvXx8DP5jygFt4YhN+Bfo1+i3rCXrA58vwZz3h5iA6GudAAkgACSAt2e3VDUCyAgkgCSABJIAEkASQLlITD1PP3xDL9Oix+uAAFH4EbWESQAJIAAkgCSABpBhtDcElO35pleivkgHQYnSOP+LFVlSiZ8inANIgIqENAbSwHldh6lcPQALI8gNQ53q85KU61bNyI3FBPe5Eq1BPDjq2MAFk+QGIHoDo6VQPQPQARA9AufW4CtOkEi8/ANm8prbNPa8zzR89OVeg/35xnR6Ayue1riF6cgI6P6+1DNHjJFoAzbl4WH4AmsUQPQCVG6InP6DhkzfWED29rEBzGKKnry2sriHPSns8B5pvL7P89HISPcrQxPvXnetJexU2al6Ln6DRk/kyvtgQPQCVG6IHoJp7GT29AzLfANUxVIsRjj0CqjX39HQNaKIAegAqd0APQOUa6AGICYAWMoQaQOU46AGo3BA9AI0wdMyl4o3H9PkvracNyQokgASQAJIAEkAC6HT+hC/uuFmBBJAAsosFHbGNEaHHFkYPQBahmEO03h32DQ6TB+NRfsA2RoqehCuQ1SjKz1IAQGo5V2ECSAAJIAEkASSABJAAkgASQAJIAEkACSABJIAkgASQABJAAkgCSAAJIAEkASSABJAAkgASQAJIAEkACSABJIAEkASQABJA6q1vfVMHvpfaPP8AAAAASUVORK5CYII="><link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAIAAADdvvtQAAAC2ElEQVR42u3du1EDMRRAUdvjHohMQg9UYpowDRARENEAVUAl9EBCRhdkjAeMZ1er9eo9nRvxmWEW6SDtB/B6d9ivpNI2hkAACSABJIAkgASQABJAEkACSAAJIAkgASSABJAEkAASQAJIAEkACSABJIAkgASQABJAEkACSAAJIAkgASSAFL1tgu/h8+X15+3r+zsHbAUqnIy/7zpggEZMRvtTEu6AnQMJIAEkgCSABJAAUp6auBP99vjc+BdscwT2Tw9WINnCBJAEkAASQAJIAkgACSAB1HDvXx8DP5jygFt4YhN+Bfo1+i3rCXrA58vwZz3h5iA6GudAAkgACSAt2e3VDUCyAgkgCSABJIAEkASQLlITD1PP3xDL9Oix+uAAFH4EbWESQAJIAAkgCSABpBhtDcElO35pleivkgHQYnSOP+LFVlSiZ8inANIgIqENAbSwHldh6lcPQALI8gNQ53q85KU61bNyI3FBPe5Eq1BPDjq2MAFk+QGIHoDo6VQPQPQARA9AufW4CtOkEi8/ANm8prbNPa8zzR89OVeg/35xnR6Ayue1riF6cgI6P6+1DNHjJFoAzbl4WH4AmsUQPQCVG6InP6DhkzfWED29rEBzGKKnry2sriHPSns8B5pvL7P89HISPcrQxPvXnetJexU2al6Ln6DRk/kyvtgQPQCVG6IHoJp7GT29AzLfANUxVIsRjj0CqjX39HQNaKIAegAqd0APQOUa6AGICYAWMoQaQOU46AGo3BA9AI0wdMyl4o3H9PkvracNyQokgASQAJIAEkAC6HT+hC/uuFmBBJAAsosFHbGNEaHHFkYPQBahmEO03h32DQ6TB+NRfsA2RoqehCuQ1SjKz1IAQGo5V2ECSAAJIAEkASSABJAAkgASQAJIAEkACSABJIAkgASQABJAAkgCSAAJIAEkASSABJAAkgASQAJIAEkACSABJIAEkASQABJA6q1vfVMHvpfaPP8AAAAASUVORK5CYII=">
+<style>
+:root{--bg:#f1f4f2;--panel:#fff;--ink:#1b2a25;--muted:#5d6d66;--line:#d8e1dc;--accent:#1d6a54;--on:#fff;--soft:#e2f1ea;--warn:#fff1cf;--bad:#b3261e;--c1:#1f8a70;--c2:#5568d9;--c3:#c98a12;--c4:#cf4f77;--c0:#7d8a84}
+@media(prefers-color-scheme:dark){:root{--bg:#121816;--panel:#1c2622;--ink:#eaf3ee;--muted:#a6b6af;--line:#33423b;--accent:#7fd3af;--on:#10201a;--soft:#24423a;--warn:#43391f;--bad:#ff8f86;--c1:#4cc4a4;--c2:#8d9cff;--c3:#f0b84a;--c4:#f58aa9;--c0:#92a09a}}
+*{box-sizing:border-box}html{scroll-padding-top:70px}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+.wrap{max-width:860px;margin:auto;padding:0 14px}
+header{background:var(--panel);border-bottom:1px solid var(--line);padding:18px 0 16px}
+.top{display:flex;justify-content:space-between;gap:14px;align-items:flex-start}
+h1{font-size:clamp(22px,5vw,30px);line-height:1.15;margin:0}
+h2{font-size:19px;margin:0 0 4px}h3{font-size:15px;margin:0 0 8px}
+.sub,.small{color:var(--muted);font-size:14px;margin:4px 0 0}
+.days{text-align:right;flex:none}.days b{display:block;font-size:40px;line-height:1;color:var(--accent);font-variant-numeric:tabular-nums}.days span{font-size:12px;color:var(--muted)}
+.nav{position:sticky;top:0;z-index:5;background:var(--bg);display:flex;gap:6px;padding:10px 14px;max-width:860px;margin:auto;overflow-x:auto}
+button,.btn{font:600 14px inherit;font-family:inherit;border:1px solid var(--line);background:var(--panel);color:var(--ink);border-radius:10px;padding:9px 13px;cursor:pointer;white-space:nowrap}
+button:hover{border-color:var(--accent)}
+button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,summary:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.on,button.primary{background:var(--accent);border-color:var(--accent);color:var(--on)}
+button.ghost{border-color:transparent;background:none;color:var(--muted);padding:6px 9px}
+button.del{color:var(--bad);border-color:transparent;background:none;font-size:20px;line-height:1;padding:4px 9px}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px;margin:0 0 14px}
+.row{display:flex;gap:10px;align-items:flex-end;flex-wrap:wrap}.row>*{min-width:0}.between{justify-content:space-between;align-items:center}
+.field{flex:1 1 150px;margin-top:12px}
+label{display:block;font-size:13px;font-weight:700;color:var(--muted);margin:0 0 5px}
+input[type=date],input[type=text],select,textarea{width:100%;padding:10px;border:1px solid var(--line);border-radius:9px;background:var(--bg);color:var(--ink);font:inherit}
+input[type=checkbox]{width:19px;height:19px;accent-color:var(--accent);flex:none;margin:2px 0 0}
+textarea{min-height:80px;resize:vertical}
+.bar{height:8px;background:var(--line);border-radius:9px;overflow:hidden}.bar i{display:block;height:100%;background:var(--accent);width:0;transition:width .3s}
+.seg{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-top:12px}.seg button{padding:9px 4px}
+details.sub1{border:1px solid var(--line);border-radius:11px;margin:8px 0;overflow:hidden}
+summary{padding:11px 12px;font-weight:700;cursor:pointer;display:flex;align-items:center;gap:9px;background:var(--bg)}
+.dot{width:11px;height:11px;border-radius:50%;flex:none;background:var(--c0)}
+.cnt{margin-left:auto;font-weight:600;font-size:13px;color:var(--muted)}
+.chs{padding:4px 12px 8px}
+.ch{display:flex;gap:10px;align-items:flex-start;padding:9px 0;border-bottom:1px solid var(--line);margin:0;font-size:15px;font-weight:500;color:var(--ink);cursor:pointer}
+.ch:last-child{border:0}.ch span{flex:1}.ch.all{font-weight:700;color:var(--accent)}
+.st{font-size:12px;color:var(--muted);flex:none!important}.st.d{color:var(--accent);font-weight:700}
+.hint{background:var(--soft);border-radius:10px;padding:9px 12px;font-size:14px;margin-top:12px}
+.err{background:var(--warn)}
+.list{display:grid;gap:8px;margin-top:10px}
+.item{display:flex;gap:10px;align-items:flex-start;border:1px solid var(--line);border-left:5px solid var(--c0);border-radius:10px;padding:10px 8px 10px 12px}
+.item .t{flex:1;min-width:0}.item b{font-weight:700;overflow-wrap:anywhere}.item .m{font-size:13px;color:var(--muted)}
+.item.done{background:var(--soft)}.item.done b{text-decoration:line-through;opacity:.65}
+.item.late{border-color:var(--bad);border-left-color:var(--bad)}
+.add{display:flex;gap:8px;margin-top:10px}.add select{flex:0 0 40%}.add input{flex:1}
+.cov{display:grid;gap:12px;margin-top:10px}.cov .l{display:flex;justify-content:space-between;gap:8px;font-size:14px;margin-bottom:5px}.cov .l b{font-weight:700}.cov .l span{color:var(--muted);font-size:13px}
+.wk,.cal{display:grid;grid-template-columns:repeat(7,1fr);gap:4px}.wk{text-align:center;font-size:12px;color:var(--muted);margin-top:12px}.cal{margin-top:4px}
+.cd{min-height:58px;border:1px solid var(--line);border-radius:8px;background:var(--panel);padding:4px;text-align:left;display:flex;flex-direction:column;gap:3px;font-size:12px;color:var(--ink)}
+.cd b{font-size:14px}.cd.td{border-color:var(--accent);box-shadow:inset 0 0 0 1px var(--accent)}.cd.sel{background:var(--accent);color:var(--on)}
+.dots{display:flex;flex-wrap:wrap;gap:2px}.dots i{width:7px;height:7px;border-radius:50%;background:var(--c0);box-shadow:0 0 0 1px #fff8}
+.lk a{font-weight:700;color:var(--accent);overflow-wrap:anywhere}.lk.done a{opacity:.6}.lk .note{font-size:14px;margin-top:3px;white-space:pre-wrap;overflow-wrap:anywhere}.lk .ctx{font-size:12px;color:var(--muted)}.lk .acts{display:flex;flex-direction:column;align-items:flex-end}.lk textarea{min-height:60px;margin-top:6px}#lUrl{min-height:56px}
+.bars{display:flex;align-items:flex-end;gap:4px;height:140px;margin-top:14px}.bw em{font-style:normal;font-size:11px;font-weight:700;line-height:1}.bars.dense .bw em{font-size:9px}.sg{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:14px}.sg div{background:var(--bg);border-radius:10px;padding:9px 4px;text-align:center}.sg b{display:block;font-size:18px;line-height:1.2}.sg span{font-size:11px;color:var(--muted)}@media(max-width:420px){.sg{grid-template-columns:repeat(2,1fr)}}.bw{flex:1;height:100%;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;gap:3px}.bw div{width:100%;background:var(--accent);border-radius:4px 4px 0 0;min-height:2px}.bw small{font-size:10px;color:var(--muted)}
+.crow{padding:9px 0;border-bottom:1px solid var(--line)}.crow:last-child{border:0}.crow b{display:block;font-weight:600;font-size:15px;margin-bottom:6px}.mini{display:inline-flex;gap:6px;align-items:center;font-size:13px;font-weight:600;margin:0 14px 4px 0;color:var(--ink);cursor:pointer}
+.cd.inp:not(.sel){background:var(--soft)}.cd i{font-style:normal;font-size:10px;font-weight:700;color:var(--accent);line-height:1.1}.cd.sel i{color:var(--on)}
+.cd.rng:not(.sel){background:var(--soft);box-shadow:inset 0 0 0 2px var(--accent)}
+.empty{color:var(--muted);font-size:14px;margin:10px 0 0}
+#toast{position:fixed;left:50%;bottom:calc(18px + env(safe-area-inset-bottom,0px));transform:translate(-50%,30px);opacity:0;pointer-events:none;background:var(--ink);color:var(--bg);padding:10px 14px;border-radius:11px;font-size:14px;display:flex;gap:12px;align-items:center;transition:.25s;z-index:9;max-width:92vw}
+#toast.show{transform:translate(-50%,0);opacity:1;pointer-events:auto}#toast button{background:none;border:0;color:inherit;text-decoration:underline;padding:0}
+.hidden{display:none!important}.foot{text-align:center;color:var(--muted);font-size:12px;padding:14px 14px 40px}
+@media(max-width:480px){.cd{min-height:50px;padding:3px}.panel{padding:13px}.dots i{width:6px;height:6px}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+</style></head><body>
+<header><div class="wrap"><div class="top"><div><h1>CA Foundation Planner</h1><p class="sub" id="examLine"></p></div><div class="days"><b id="daysLeft">–</b><span>days left</span></div></div>
+<div class="row"><div class="field" style="flex:1 1 100%"><label for="perSel">Preparation period</label><div class="add" style="margin:0"><select id="perSel" style="flex:1"></select><button data-act="newper">＋ New</button><button class="ghost" data-act="delper">Delete</button></div></div>
+<div class="field" style="flex:2 1 220px"><label for="perLabel">Name your attempt</label><input type="text" id="perLabel" maxlength="60" placeholder="e.g. Jan 27 CA Foundation attempt"></div><div class="field"><label for="perStart">From</label><input type="date" id="perStart"></div><div class="field"><label for="perEnd">To</label><input type="date" id="perEnd"></div>
+<div class="field" style="flex:1 1 100%"><label>Goals completed <span id="overallTxt"></span></label><div class="bar"><i id="overallBar"></i></div></div></div></div></header>
+<div class="wrap"><div class="hint err hidden" id="warn" style="margin:10px 0 0">⚠ <b>Your data is not being saved.</b> This browser blocks saving for pages opened from Downloads or Files. Changes last only while this tab stays open (a refresh is fine). Tap <b>Download backup</b> after each session, or put the page on a web link.<div class="row" style="margin-top:8px"><button data-act="export">Download backup</button></div></div></div>
+<div class="nav" id="nav"><button data-act="tab" data-t="plan" class="on">Plan</button><button data-act="tab" data-t="today">Today</button><button data-act="tab" data-t="calendar">Calendar</button><button data-act="tab" data-t="links">Links</button><button data-act="tab" data-t="log">Study log</button><button data-act="tab" data-t="backup">Backup</button></div>
+<main class="wrap">
+<section id="v-plan">
+<div class="panel"><div class="row between"><div><h2>1. Pick chapters</h2><p class="small" id="selTxt"></p></div><button class="ghost" data-act="clearsel">Clear</button></div><div id="picker"></div>
+<div class="add"><select id="addSub" aria-label="Subject"></select><input type="text" id="addName" maxlength="80" placeholder="Missing a chapter? Type its name" aria-label="New chapter name"><button data-act="addch">Add</button></div></div>
+<div class="panel"><h2>2. Choose the period</h2><div class="seg" id="seg"><button data-act="lvl" data-l="daily">Daily</button><button data-act="lvl" data-l="weekly">Weekly</button><button data-act="lvl" data-l="monthly">Monthly</button><button data-act="lvl" data-l="custom">Custom</button></div>
+<div class="row"><div class="field"><label for="fStart">Start date</label><input type="date" id="fStart"></div><div class="field"><label for="fEnd">End date</label><input type="date" id="fEnd"></div></div><div class="hint" id="rangeHint"></div></div>
+<div class="panel"><h2>3. Add details <span class="small">(optional)</span></h2>
+<div class="field" style="margin-top:8px"><label for="custom">Your own task</label><input type="text" id="custom" maxlength="100" placeholder="e.g. Mock test, revise wrong MCQs"></div>
+<div class="field"><label for="target">Target</label><input type="text" id="target" maxlength="60" placeholder="e.g. 30 questions per chapter, 2 hours"></div>
+<div class="row" style="margin-top:14px"><button class="primary" data-act="addgoals">Add to plan</button></div><p class="small" id="formMsg" role="status"></p></div>
+</section>
+
+<section id="v-today" class="hidden">
+<div class="panel"><div class="row between"><div><h2 id="tLabel">Today</h2><p class="small" id="tSub"></p></div><div class="days"><b id="tPct" style="font-size:30px">0%</b></div></div><div class="bar" style="margin-top:10px"><i id="tBar"></i></div><div class="list" id="tList"></div></div>
+<div class="panel hidden" id="lateBox"><h3 style="color:var(--bad)">Overdue</h3><div class="list" id="lateList" style="margin-top:0"></div></div>
+<div class="panel"><h3>Coming up</h3><div class="list" id="nextList" style="margin-top:0"></div></div>
+<div class="panel"><h2>Syllabus coverage</h2><p class="small">A chapter counts once one of its goals is ticked off.</p><div class="cov" id="cov"></div></div>
+<div class="panel"><label for="tNote">Note for today</label><textarea id="tNote" placeholder="What went well? What to revisit?"></textarea></div>
+</section>
+
+<section id="v-calendar" class="hidden"><div class="panel"><div class="row between"><h2 id="mTitle" style="margin:0"></h2><div class="row"><button data-act="mon" data-n="-1" aria-label="Previous month">‹</button><button data-act="mon" data-n="0">Today</button><button data-act="monper">Period</button><button data-act="mon" data-n="1" aria-label="Next month">›</button></div></div>
+<div class="wk"><span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span></div><div class="cal" id="cal"></div><p class="small" id="calLeg"></p></div>
+<div class="panel"><div class="row between"><div><h2 style="margin:0">Select a range</h2><p class="small" id="rsHint"></p></div><button data-act="rson" id="rsBtn">Select range</button></div><div id="rsBox"></div></div>
+<div class="panel"><div class="row between"><h2 id="dLabel" style="margin:0"></h2><button data-act="plandate">＋ Plan for this date</button></div><div class="list" id="dList"></div><div class="field"><label for="dNote">Note for this date</label><textarea id="dNote" placeholder="Optional"></textarea></div></div></section>
+
+<section id="v-links" class="hidden">
+<div class="panel"><h2>Link library</h2><p class="small">Save videos, RTPs, MTPs and PYQs under a chapter, with a note on what is inside. Up to 100 links per chapter.</p>
+<div class="row"><div class="field"><label for="lSub">Subject</label><select id="lSub"></select></div><div class="field" style="flex:2 1 220px"><label for="lCh">Chapter</label><select id="lCh"></select></div></div>
+<div class="add" id="othBox"><input type="text" id="othName" maxlength="60" placeholder="New chapter, e.g. RTP, MTP, PYQ, Mock tests" aria-label="New chapter name"><button data-act="addoth">Add chapter</button><button class="ghost" data-act="deloth" id="othDel">Delete</button></div></div>
+<div class="panel" id="lAdd"><div class="field" style="margin-top:0"><label for="lUrl">Link (paste one or many, one per line)</label><textarea id="lUrl" placeholder="https://youtu.be/..."></textarea></div>
+<div class="field"><label for="lNote">What is inside this link?</label><input type="text" id="lNote" maxlength="200" placeholder="e.g. Unit 2 explained in 45 min, good examples"></div>
+<div class="row" style="margin-top:12px;align-items:center"><button class="primary" data-act="addlink">Save link</button><span class="small" id="lMsg" role="status"></span></div></div>
+<div class="panel"><div class="row between"><h2 id="lHead" style="margin:0"></h2><span class="small" id="lCount"></span></div><div class="list" id="lList"></div></div>
+<div class="panel"><label for="lSearch">Search all links and notes</label><input type="text" id="lSearch" placeholder="e.g. depreciation, PYQ, youtube"><div class="list" id="sList"></div></div>
+</section>
+
+<section id="v-log" class="hidden">
+<div class="panel"><h2>Study hours</h2><div class="row"><div class="field"><label for="hDate">Date</label><input type="date" id="hDate"></div><div class="field"><label for="hVal">Hours studied</label><input type="number" id="hVal" min="0" max="24" step="0.5" inputmode="decimal"></div><button class="primary" data-act="savehrs" style="margin-top:12px">Save</button></div><p class="small" id="hStat"></p></div>
+<div class="panel"><h2>Hours in a date range</h2><div class="row"><div class="field"><label for="rFrom">From</label><input type="date" id="rFrom"></div><div class="field"><label for="rTo">To</label><input type="date" id="rTo"></div></div>
+<div class="row" style="margin-top:12px;gap:6px"><button data-act="rng" data-r="7">7 days</button><button data-act="rng" data-r="14">14 days</button><button data-act="rng" data-r="30">30 days</button><button data-act="rng" data-r="month">This month</button><button data-act="rng" data-r="all">Whole period</button></div>
+<div class="sg" id="rSum"></div><div class="bars" id="hBars"></div><p class="small" id="rNote"></p></div>
+<div class="panel"><h2>Chapter checklist</h2><p class="small">Tick lecture, notes and up to three revisions for every chapter.</p><div id="chk"></div></div>
+<div class="panel"><h2>Mock tests</h2><div class="row"><div class="field" style="flex:2 1 170px"><label for="mName">Test name</label><input type="text" id="mName" maxlength="60" placeholder="e.g. MTP 1 – Paper 3"></div><div class="field" style="flex:1 1 140px"><label for="mDate">Date</label><input type="date" id="mDate"></div><div class="field" style="flex:1 1 80px"><label for="mScore">Score</label><input type="number" id="mScore" min="0" step="0.5" inputmode="decimal"></div><div class="field" style="flex:1 1 80px"><label for="mMax">Out of</label><input type="number" id="mMax" min="1" value="100" inputmode="decimal"></div></div>
+<div class="row" style="margin-top:12px;align-items:center"><button class="primary" data-act="addmock">Add test</button><span class="small" id="mMsg" role="status"></span></div><div class="list" id="mList"></div></div>
+</section>
+
+<section id="v-backup" class="hidden"><div class="panel"><h2>Backup and restore</h2><p class="small">Everything is saved in this browser only. Download a backup before switching phones or clearing browser data.</p><div class="row" style="margin-top:12px"><button class="primary" data-act="export">Download backup</button><button data-act="import">Restore backup</button><input type="file" id="file" accept=".json,application/json" class="hidden"></div><p class="small" id="bMsg" role="status"></p></div>
+<div class="panel"><h2>Reset</h2><p class="small">Deletes all goals, notes, links and added chapters from this browser.</p><div class="row" style="margin-top:12px"><button class="del" style="border:1px solid var(--bad);font-size:14px" data-act="reset">Reset everything</button></div></div></section>
+</main>
+<div class="foot"><span id="ver"></span><br>Chapter lists follow the ICAI study material — check them against your attempt's edition.</div>
+<div id="toast" role="status"><span id="toastTxt"></span><button id="toastUndo" class="hidden">Undo</button></div>
+<script>
+const BASE={"Accounting":["Theoretical Framework","Accounting Process","Bank Reconciliation Statement","Inventories","Depreciation and Amortisation","Bills of Exchange and Promissory Notes","Preparation of Final Accounts of Sole Proprietors","Financial Statements of Not-for-Profit Organisations","Accounts from Incomplete Records","Partnership and LLP Accounts","Company Accounts"],
+"Business Laws":["Indian Regulatory Framework","The Indian Contract Act, 1872","The Sale of Goods Act, 1930","The Indian Partnership Act, 1932","The Limited Liability Partnership Act, 2008","The Companies Act, 2013","The Negotiable Instruments Act, 1881"],
+"Quantitative Aptitude":["Ratio and Proportion, Indices, Logarithms","Equations","Linear Inequalities","Mathematics of Finance","Permutations and Combinations","Sequence and Series","Sets, Relations and Functions, Limits and Continuity","Basic Applications of Differential and Integral Calculus","Number Series, Coding and Decoding and Odd Man Out","Direction Sense Test","Seating Arrangements","Blood Relations","Statistical Description of Data and Sampling","Measures of Central Tendency and Dispersion","Probability","Theoretical Distributions","Correlation and Regression","Index Numbers"],
+"Business Economics":["Nature and Scope of Business Economics","Theory of Demand and Supply","Theory of Production and Cost","Price Determination in Different Markets","Business Cycles","Determination of National Income","Public Finance","Money Market","International Trade","Indian Economy"]};
+const COL={"Accounting":"var(--c1)","Business Laws":"var(--c2)","Quantitative Aptitude":"var(--c3)","Business Economics":"var(--c4)"};
+const PAPER={"Accounting":["Paper 1",0],"Business Laws":["Paper 2",2],"Quantitative Aptitude":["Paper 3",4],"Business Economics":["Paper 4",6]};
+const KEY='caf-personal-planner-v1',$=id=>document.getElementById(id);
+const pad=n=>String(n).padStart(2,'0'),iso=d=>d.getFullYear()+'-'+pad(d.getMonth()+1)+'-'+pad(d.getDate()),today=()=>iso(new Date());
+const parse=s=>{const[a,b,c]=s.split('-').map(Number);return new Date(a,b-1,c)};
+const addDays=(s,n)=>{const d=parse(s);d.setDate(d.getDate()+n);return iso(d)};
+const fmt=(s,y)=>parse(s).toLocaleDateString('en-IN',y?{weekday:'short',day:'numeric',month:'short',year:'numeric'}:{weekday:'short',day:'numeric',month:'short'});
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+let S={v:2,examDate:'2027-01-03',goals:[],notes:{},selectedChapters:[],extra:{},links:{},otherCh:[],nextId:1};
+let tab='plan',F={level:'daily',start:today(),end:today()},cal=new Date(),sel=today(),openSubs=new Set(),undoFn=null,tt;
+cal.setDate(1);
+
+let STORE_OK=true;try{localStorage.setItem('__t','1');localStorage.removeItem('__t')}catch(e){STORE_OK=false}
+function persist(){try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){STORE_OK=false;try{window.name='CAP1'+JSON.stringify(S)}catch(e2){}}}
+function load(){try{const x=JSON.parse(STORE_OK?localStorage.getItem(KEY):(window.name.startsWith('CAP1')?window.name.slice(4):null));if(x&&Array.isArray(x.goals)){S={...S,...x};if(!x.v&&x.examDate==='2027-01-09')S.examDate='2027-01-03';S.v=2;S.extra=S.extra||{};S.notes=S.notes||{};S.selectedChapters=S.selectedChapters||[];S.links=S.links||{};S.otherCh=S.otherCh||[]}}catch(e){}
+norm()}
+const chapters=s=>BASE[s].concat(S.extra[s]||[]);
+const key=(s,c)=>s+'::'+c;
+const active=d=>S.goals.filter(g=>g.date<=d&&(g.endDate||g.date)>=d);
+function status(s,c){const m=S.goals.filter(g=>g.subject===s&&g.title===c);return m.some(g=>g.done)?'d':m.length?'p':''}
+
+function endFor(l,s){if(l==='weekly')return addDays(s,6);if(l==='monthly'){const d=parse(s),last=new Date(d.getFullYear(),d.getMonth()+2,0).getDate(),n=new Date(d.getFullYear(),d.getMonth()+1,Math.min(d.getDate(),last));n.setDate(n.getDate()-1);return iso(n)}return s}
+function toast(t,undo){clearTimeout(tt);$('toastTxt').textContent=t;undoFn=undo||null;$('toastUndo').classList.toggle('hidden',!undo);$('toast').classList.add('show');tt=setTimeout(()=>$('toast').classList.remove('show'),undo?6000:2600)}
+
+function per(){return S.periods.find(p=>p.id===S.activePer)||S.periods[0]}
+function renderHeader(){const p=per();$('warn').classList.toggle('hidden',STORE_OK);$('ver').textContent='Planner v7 · '+(STORE_OK?'saving to this browser ✓':'⚠ not saving');$('perSel').innerHTML=S.periods.map(x=>`<option value="${x.id}" ${x.id===p.id?'selected':''}>${esc(x.label||'Untitled attempt')}</option>`).join('');if(document.activeElement!==$('perLabel'))$('perLabel').value=p.label;if(document.activeElement!==$('perStart'))$('perStart').value=p.start;if(document.activeElement!==$('perEnd'))$('perEnd').value=p.end;
+const n=Math.round((parse(p.end)-parse(today()))/864e5),tot=Math.round((parse(p.end)-parse(p.start))/864e5)+1,el=Math.round((parse(today())-parse(p.start))/864e5)+1;$('daysLeft').textContent=Math.max(0,n);
+$('examLine').textContent=n<0?'This period has ended':el<1?'Starts '+fmt(p.start,1):(p.label||'Untitled attempt')+' · day '+el+' of '+tot;
+const d=S.goals.filter(g=>g.done).length,t=S.goals.length;$('overallTxt').textContent=t?`(${d} of ${t})`:'';$('overallBar').style.width=(t?d/t*100:0)+'%'}
+
+function renderPicker(){$('picker').innerHTML=Object.keys(BASE).map(s=>{const cs=chapters(s);return `<details class="sub1" data-sub="${esc(s)}" ${openSubs.has(s)?'open':''}><summary><i class="dot" style="background:${COL[s]}"></i>${esc(s)}<span class="cnt" data-cnt="${esc(s)}"></span></summary><div class="chs"><label class="ch all"><input type="checkbox" data-all="${esc(s)}"><span>Select all</span></label>${cs.map(c=>{const k=key(s,c),st=status(s,c);return `<label class="ch"><input type="checkbox" data-k="${esc(k)}" ${S.selectedChapters.includes(k)?'checked':''}><span>${esc(c)}</span>${st?`<em class="st ${st}">${st==='d'?'✓ done':'planned'}</em>`:''}</label>`}).join('')}</div></details>`}).join('');
+$('addSub').innerHTML=Object.keys(BASE).map(s=>`<option>${esc(s)}</option>`).join('');counts()}
+function counts(){let tot=0;Object.keys(BASE).forEach(s=>{const cs=chapters(s),n=cs.filter(c=>S.selectedChapters.includes(key(s,c))).length;tot+=n;const e=document.querySelector(`[data-cnt="${CSS.escape(s)}"]`);if(e)e.textContent=n?`${n} of ${cs.length} selected`:cs.length+' chapters';const a=document.querySelector(`[data-all="${CSS.escape(s)}"]`);if(a){a.checked=n===cs.length;a.indeterminate=n>0&&n<cs.length}});
+$('selTxt').textContent=tot?tot+' selected — you can mix subjects':'Open a subject and tick the chapters you want to plan'}
+
+function renderForm(){document.querySelectorAll('#seg button').forEach(b=>b.classList.toggle('on',b.dataset.l===F.level));$('fStart').value=F.start;$('fEnd').value=F.end;const h=$('rangeHint'),bad=!F.start||!F.end||F.end<F.start;h.classList.toggle('err',bad);
+if(bad)h.textContent='The end date must be on or after the start date.';else{const n=Math.round((parse(F.end)-parse(F.start))/864e5)+1;h.textContent=(n===1?fmt(F.start):fmt(F.start)+' to '+fmt(F.end))+' · '+n+(n===1?' day':' days')}}
+
+function addGoals(){const m=$('formMsg');if(!F.start||!F.end||F.end<F.start){m.textContent='Fix the dates first: the end date must be on or after the start date.';return}
+const custom=$('custom').value.trim(),target=$('target').value.trim(),ks=S.selectedChapters.slice();if(!ks.length&&!custom){m.textContent='Pick at least one chapter or type your own task.';return}
+const mk=(subject,title)=>S.goals.push({id:S.nextId++,level:F.level,date:F.start,endDate:F.end,subject,title,target,done:false});
+ks.forEach(k=>{const i=k.indexOf('::');mk(k.slice(0,i),k.slice(i+2))});if(custom)mk('General',custom);
+const n=ks.length+(custom?1:0);S.selectedChapters=[];$('custom').value='';$('target').value='';m.textContent='';persist();renderPicker();renderHeader();toast(n+(n===1?' goal':' goals')+' added for '+fmt(F.start)+(F.end>F.start?' – '+fmt(F.end):''))}
+
+function item(g,late){const c=COL[g.subject]||'var(--c0)',multi=g.endDate&&g.endDate!==g.date,lv={daily:'Daily',weekly:'Weekly',monthly:'Monthly',custom:'Custom'}[g.level]||'';
+return `<div class="item ${g.done?'done':''} ${late?'late':''}" style="border-left-color:${late?'':c}"><input type="checkbox" data-g="${g.id}" ${g.done?'checked':''} aria-label="Mark ${esc(g.title)} complete"><div class="t"><b>${esc(g.title)}</b><div class="m">${esc(g.subject||'General')}${multi?' · '+fmt(g.date)+' – '+fmt(g.endDate):' · '+fmt(g.date)}${lv?' · '+lv:''}${g.target?' · Target: '+esc(g.target):''}</div></div><button class="del" data-act="del" data-id="${g.id}" aria-label="Delete goal">×</button></div>`}
+const list=(a,late)=>a.length?a.map(g=>item(g,late)).join(''):''
+
+function renderToday(){const d=today(),a=active(d).sort((x,y)=>(x.endDate||x.date).localeCompare(y.endDate||y.date)),done=a.filter(g=>g.done).length,p=a.length?Math.round(done/a.length*100):0;
+$('tLabel').textContent=fmt(d,1);$('tSub').textContent=a.length?`${done} of ${a.length} goals done`:'Nothing planned for today';$('tPct').textContent=p+'%';$('tBar').style.width=p+'%';
+$('tList').innerHTML=list(a)||'<p class="empty">Nothing planned yet. Go to Plan and add your first goal.</p>';
+const late=S.goals.filter(g=>!g.done&&(g.endDate||g.date)<d).sort((x,y)=>x.date.localeCompare(y.date));$('lateBox').classList.toggle('hidden',!late.length);$('lateList').innerHTML=list(late,true);
+const nx=S.goals.filter(g=>!g.done&&g.date>d).sort((x,y)=>x.date.localeCompare(y.date)).slice(0,5);$('nextList').innerHTML=list(nx)||'<p class="empty">No upcoming goals.</p>';
+$('cov').innerHTML=Object.keys(BASE).map(s=>{const cs=chapters(s),n=cs.filter(c=>status(s,c)==='d').length;return `<div><div class="l"><b><i class="dot" style="background:${COL[s]};display:inline-block;margin-right:7px"></i>${esc(s)}</b><span>${n}/${cs.length} chapters · ${PAPER[s][0]}</span></div><div class="bar"><i style="width:${n/cs.length*100}%;background:${COL[s]}"></i></div></div>`}).join('');
+$('tNote').value=S.notes[d]||''}
+
+function renderGrid(){$('mTitle').textContent=cal.toLocaleDateString('en-IN',{month:'long',year:'numeric'});const lo=RS.a&&(RS.b?RS.a:RS.a),hi=RS.b||RS.a,P=per(),y=cal.getFullYear(),m=cal.getMonth(),off=new Date(y,m,1).getDay(),n=new Date(y,m+1,0).getDate();let h='<div></div>'.repeat(off);
+for(let i=1;i<=n;i++){const d=y+'-'+pad(m+1)+'-'+pad(i),a=active(d),subs=[...new Set(a.map(g=>g.subject))].slice(0,4);h+=`<button class="cd ${d===today()?'td':''} ${d===sel?'sel':''} ${d>=P.start&&d<=P.end?'inp':''} ${lo&&d>=lo&&d<=hi?'rng':''}" data-act="pick" data-d="${d}" aria-label="${fmt(d,1)}${a.length?', '+a.length+' goals':''}"><b>${i}</b>${d===P.start?'<i>▶ start</i>':''}${d===P.end?'<i>⚑ end</i>':''}<span class="dots">${subs.map(s=>`<i style="background:${COL[s]||'var(--c0)'}"></i>`).join('')}</span>${a.length?`<span>${a.filter(g=>g.done).length}/${a.length}</span>`:''}${S.day[d]?'<span>'+hh(S.day[d])+'h</span>':''}${S.notes[d]?'<span>✎</span>':''}</button>`}$('cal').innerHTML=h;$('calLeg').textContent='Shaded: '+(P.label||'Untitled attempt')+' ('+fmt(P.start)+' to '+fmt(P.end,1)+') · ▶ start · ⚑ end';renderRS()}
+function renderDay(){const a=active(sel);$('dLabel').textContent=fmt(sel,1)+(S.day[sel]?' · '+hh(S.day[sel])+' h studied':'');$('dList').innerHTML=list(a)||'<p class="empty">No goals on this date.</p>';$('dNote').value=S.notes[sel]||''}
+
+function show(t){tab=t;document.querySelectorAll('#nav button').forEach(b=>b.classList.toggle('on',b.dataset.t===t));['plan','today','calendar','links','log','backup'].forEach(x=>$('v-'+x).classList.toggle('hidden',x!==t));render();window.scrollTo(0,0)}
+function render(){renderHeader();if(tab==='today')renderToday();if(tab==='calendar'){renderGrid();renderDay()}if(tab==='links')renderLinks();if(tab==='log')renderLog()}
+function afterChange(){persist();render();if(tab==='plan')renderPicker()}
+
+document.addEventListener('click',e=>{const b=e.target.closest('[data-act]');if(!b)return;const a=b.dataset.act;
+if(a==='tab')show(b.dataset.t);
+else if(a==='lvl'){F.level=b.dataset.l;if(F.level!=='custom')F.end=endFor(F.level,F.start);renderForm()}
+else if(a==='clearsel'){S.selectedChapters=[];persist();renderPicker()}
+else if(a==='addch'){const n=$('addName').value.trim(),s=$('addSub').value;if(!n)return;if(chapters(s).includes(n)){toast('That chapter already exists');return}(S.extra[s]=S.extra[s]||[]).push(n);S.selectedChapters.push(key(s,n));openSubs.add(s);$('addName').value='';persist();renderPicker();toast('Chapter added and selected')}
+else if(a==='addgoals')addGoals();
+else if(a==='del'){const id=+b.dataset.id,i=S.goals.findIndex(g=>g.id===id);if(i<0)return;const g=S.goals.splice(i,1)[0];afterChange();toast('Goal deleted',()=>{S.goals.push(g);afterChange()})}
+else if(a==='mon'){const n=+b.dataset.n;if(n===0){cal=new Date();cal.setDate(1);sel=today()}else cal.setMonth(cal.getMonth()+n);renderGrid();renderDay()}
+else if(a==='monper'){goCal(per().start);renderGrid();renderDay()}
+else if(a==='pick'){const d=b.dataset.d;sel=d;if(RS.on){if(!RS.a||RS.b){RS.a=d;RS.b=null}else{RS.b=d;if(RS.b<RS.a)[RS.a,RS.b]=[RS.b,RS.a]}}renderGrid();renderDay()}
+else if(a==='rson'){RS.on=!RS.on;if(!RS.on){RS.a=RS.b=null}renderGrid()}
+else if(a==='rsclr'){RS.a=RS.b=null;renderGrid()}
+else if(a==='rsper'){const p=per();p.start=RS.a;p.end=RS.b;persist();render();toast('Preparation period set: '+fmt(RS.a)+' to '+fmt(RS.b))}
+else if(a==='rschart'){R={from:RS.a,to:RS.b};show('log')}
+else if(a==='plandate'){F.start=sel;F.end=endFor(F.level,sel);show('plan');renderForm()}
+else if(a==='addlink')addLinks();
+else if(a==='addoth'){const n=$('othName').value.trim();if(!n)return;if(S.otherCh.includes(n)){toast('That chapter already exists');return}S.otherCh.push(n);L.ch=n;$('othName').value='';persist();renderLinks();toast('Chapter added')}
+else if(a==='deloth'){const k=curKey(),n=(S.links[k]||[]).length;if(confirm(`Delete "${L.ch}"${n?' and its '+n+' links':''}?`)){S.otherCh=S.otherCh.filter(c=>c!==L.ch);delete S.links[k];L.ch='';persist();renderLinks()}}
+else if(a==='dellink'){const k=b.dataset.lk,arr=S.links[k]||[],i=arr.findIndex(x=>x.id===+b.dataset.id);if(i<0)return;const l=arr.splice(i,1)[0];if(!arr.length)delete S.links[k];persist();renderLinks();toast('Link deleted',()=>{(S.links[k]=S.links[k]||[]).splice(i,0,l);persist();renderLinks()})}
+else if(a==='editnote'){L.edit=+b.dataset.id||null;renderLinks()}
+else if(a==='savenote'){const l=(S.links[b.dataset.lk]||[]).find(x=>x.id===+b.dataset.id);if(l){l.note=$('eNote').value.trim();persist()}L.edit=null;renderLinks()}
+else if(a==='newper'){const id=S.nextId++;S.periods.push({id,label:'',start:today(),end:addDays(today(),90)});S.activePer=id;persist();render();$('perLabel').focus()}
+else if(a==='delper'){if(S.periods.length<2){toast('Keep at least one preparation period');return}if(confirm('Delete "'+(per().label||'Untitled attempt')+'"? Your goals and logs are not affected.')){S.periods=S.periods.filter(x=>x.id!==S.activePer);S.activePer=S.periods[0].id;persist();render()}}
+else if(a==='rng'){const t=today(),r=b.dataset.r,p=per();if(r==='month')R={from:t.slice(0,8)+'01',to:t};else if(r==='all'){const e=p.end<t?p.end:t;R={from:p.start,to:e<p.start?p.start:e}}else R={from:addDays(t,-(+r-1)),to:t};showHrs()}
+else if(a==='savehrs'){const v=parseFloat($('hVal').value),d=$('hDate').value;if(!d||isNaN(v)||v<0||v>24){toast('Enter hours between 0 and 24');return}S.day[d]=v;persist();showHrs();toast('Saved')}
+else if(a==='addmock'){const n=$('mName').value.trim(),d=$('mDate').value,sc=parseFloat($('mScore').value),mx=parseFloat($('mMax').value),m=$('mMsg');if(!n||!d||isNaN(sc)||!(mx>0)||sc<0||sc>mx){m.textContent='Fill in name, date, and a score between 0 and the maximum.';return}S.mocks.push({id:S.nextId++,name:n,date:d,score:sc,max:mx});$('mName').value='';$('mScore').value='';m.textContent='';persist();renderMocks()}
+else if(a==='delmock'){const i=S.mocks.findIndex(x=>x.id===+b.dataset.id);if(i<0)return;const m=S.mocks.splice(i,1)[0];persist();renderMocks();toast('Test deleted',()=>{S.mocks.push(m);persist();renderMocks()})}
+else if(a==='export'){const u=URL.createObjectURL(new Blob([JSON.stringify({app:'CA Foundation Planner',version:2,exported:new Date().toISOString(),state:S},null,2)],{type:'application/json'})),l=document.createElement('a');l.href=u;l.download='ca-planner-backup-'+today()+'.json';l.click();URL.revokeObjectURL(u);$('bMsg').textContent='Backup downloaded. Check your Downloads folder.'}
+else if(a==='import')$('file').click();
+else if(a==='reset'){if(confirm('Delete all goals, notes, links and added chapters? Download a backup first if unsure.')){S={v:2,examDate:S.examDate,periods:S.periods,activePer:S.activePer,goals:[],notes:{},selectedChapters:[],extra:{},links:{},otherCh:[],nextId:1};norm();persist();renderPicker();render();$('bMsg').textContent='Planner reset.'}}});
+$('toastUndo').onclick=()=>{if(undoFn)undoFn();undoFn=null;$('toast').classList.remove('show')};
+
+document.addEventListener('change',e=>{const t=e.target;
+if(t.dataset.lw){const l=(S.links[t.dataset.lk]||[]).find(x=>x.id===+t.dataset.lw);if(l){l.done=t.checked;persist();renderLinks()}}
+else if(t.id==='lSub'){L.sub=t.value;L.ch='';L.edit=null;renderLinks()}
+else if(t.id==='lCh'){L.ch=t.value;L.edit=null;renderLinks()}
+else if(t.dataset.k!==undefined){const k=t.dataset.k;S.selectedChapters=S.selectedChapters.filter(x=>x!==k);if(t.checked)S.selectedChapters.push(k);persist();counts()}
+else if(t.dataset.all){const s=t.dataset.all;chapters(s).forEach(c=>{const k=key(s,c);S.selectedChapters=S.selectedChapters.filter(x=>x!==k);if(t.checked)S.selectedChapters.push(k)});persist();document.querySelectorAll(`details[data-sub="${CSS.escape(s)}"] [data-k]`).forEach(i=>i.checked=t.checked);counts()}
+else if(t.dataset.g){const g=S.goals.find(x=>x.id===+t.dataset.g);if(g){g.done=t.checked;afterChange()}}
+else if(t.id==='perSel'){S.activePer=+t.value;goCal(per().start);persist();render()}
+else if(t.id==='perStart'||t.id==='perEnd'){const p=per(),st=t.id==='perStart';if(t.value)p[st?'start':'end']=t.value;if(p.end<p.start){if(st)p.end=p.start;else p.start=p.end}goCal(st?p.start:p.end);persist();render()}
+else if(t.id==='hDate')showHrs();
+else if(t.id==='rFrom'||t.id==='rTo'){const f=t.id==='rFrom';if(t.value)R[f?'from':'to']=t.value;if(R.to<R.from){if(f)R.to=R.from;else R.from=R.to}showHrs()}
+else if(t.dataset.c){if(t.checked)S.chk[t.dataset.c]=1;else delete S.chk[t.dataset.c];persist();renderChk()}
+else if(t.id==='fStart'){F.start=t.value;if(F.level!=='custom'&&F.start)F.end=endFor(F.level,F.start);else if(F.end<F.start)F.end=F.start;renderForm()}
+else if(t.id==='fEnd'){F.end=t.value;F.level='custom';renderForm()}
+else if(t.id==='file'){const f=t.files[0];if(!f)return;const r=new FileReader();r.onload=()=>{try{const x=JSON.parse(r.result),v=x.state||x;if(!v)throw 0;if(!Array.isArray(v.goals)){if(!(v.chk||v.day||v.mock))throw 0;if(!confirm('This looks like a backup from your old planner. Import its study days and checklist ticks? Your current data stays.'))return;$('bMsg').textContent=importOld(v);persist();render();t.value='';return}if(!confirm('Restore this backup? Current planner data will be replaced.'))return;S={v:2,examDate:'2027-01-03',goals:[],notes:{},selectedChapters:[],extra:{},links:{},otherCh:[],nextId:1,...v};S.extra=S.extra||{};S.notes=S.notes||{};S.selectedChapters=S.selectedChapters||[];S.links=S.links||{};S.otherCh=S.otherCh||[];S.nextId=Math.max(S.nextId||1,...S.goals.map(g=>g.id+1),1);norm();persist();renderPicker();render();$('bMsg').textContent='Backup restored.'}catch(err){$('bMsg').textContent='That file is not a valid planner backup.'}t.value=''};r.readAsText(f)}});
+document.addEventListener('toggle',e=>{const d=e.target;if(d.matches&&d.matches('details[data-sub]'))d.open?openSubs.add(d.dataset.sub):openSubs.delete(d.dataset.sub)},true);
+$('lSearch').addEventListener('input',renderSearch);
+$('perLabel').addEventListener('input',e=>{per().label=e.target.value;persist();renderHeader()});
+$('tNote').addEventListener('input',e=>{const v=e.target.value;v?S.notes[today()]=v:delete S.notes[today()];persist()});
+$('dNote').addEventListener('input',e=>{const v=e.target.value;v?S.notes[sel]=v:delete S.notes[sel];persist();renderGrid()});
+
+/* ---------- Link library ---------- */
+const MAXL=100,lkey=(s,c)=>s+'::'+c,lchs=s=>s==='Others'?S.otherCh:chapters(s),subs=()=>Object.keys(BASE).concat('Others');
+let L={sub:'Accounting',ch:'',edit:null};COL.Others='var(--c0)';
+const curKey=()=>lkey(L.sub,L.ch),curLinks=()=>S.links[curKey()]||[];
+function normURL(s){s=s.trim();if(!s)return null;if(!/^https?:\/\//i.test(s)){if(/^[\w-]+(\.[\w-]+)+([\/?#]|$)/.test(s))s='https://'+s;else return null}try{new URL(s)}catch(e){return null}return s}
+function label(u){try{const x=new URL(u),h=x.hostname.replace(/^www\./,'');let n=h;if(/youtube\.com|youtu\.be/.test(h))n='YouTube';else if(/drive\.google/.test(h))n='Google Drive';else if(/icai\.org/.test(h))n='ICAI';const rest=(x.pathname+x.search).replace(/^\/$/,'');return n+(rest?' · '+rest.slice(0,38)+(rest.length>38?'…':''):'')}catch(e){return u}}
+function linkHTML(l,k,ctx){const s=k.split('::')[0],ed=L.edit===l.id;
+return `<div class="item lk ${l.done?'done':''}" style="border-left-color:${COL[s]||'var(--c0)'}"><input type="checkbox" data-lw="${l.id}" data-lk="${esc(k)}" ${l.done?'checked':''} aria-label="Mark as watched"><div class="t">${ctx?`<div class="ctx">${esc(s)} › ${esc(k.slice(s.length+2))}</div>`:''}<a href="${esc(l.url)}" target="_blank" rel="noopener noreferrer">${esc(label(l.url))}</a>${ed?`<textarea id="eNote" maxlength="200">${esc(l.note)}</textarea><div class="row" style="margin-top:6px"><button class="primary" data-act="savenote" data-id="${l.id}" data-lk="${esc(k)}">Save</button><button data-act="editnote" data-id="0">Cancel</button></div>`:`<div class="note">${l.note?esc(l.note):'<span class="small">No note yet</span>'}</div>`}</div><div class="acts"><button class="del" data-act="dellink" data-id="${l.id}" data-lk="${esc(k)}" aria-label="Delete link">×</button>${ed?'':`<button class="ghost" data-act="editnote" data-id="${l.id}">Edit</button>`}</div></div>`}
+function renderLinks(){const ss=subs();$('lSub').innerHTML=ss.map(s=>`<option ${s===L.sub?'selected':''}>${esc(s)}</option>`).join('');
+const cs=lchs(L.sub);if(!cs.includes(L.ch))L.ch=cs[0]||'';
+$('lCh').innerHTML=cs.length?cs.map(c=>{const n=(S.links[lkey(L.sub,c)]||[]).length;return `<option value="${esc(c)}" ${c===L.ch?'selected':''}>${esc(c)}${n?' ('+n+')':''}</option>`}).join(''):'<option value="">No chapters yet</option>';
+const oth=L.sub==='Others';$('othBox').classList.toggle('hidden',!oth);$('othDel').classList.toggle('hidden',!L.ch);$('lAdd').classList.toggle('hidden',!L.ch);
+const a=curLinks();$('lHead').textContent=L.ch||(oth?'Create your first chapter above':'');$('lCount').textContent=L.ch?`${a.length}/${MAXL} links · ${a.filter(x=>x.done).length} watched`:'';
+$('lList').innerHTML=L.ch?(a.map(l=>linkHTML(l,curKey())).join('')||'<p class="empty">No links yet. Paste your first one above.</p>'):'<p class="empty">'+(oth?'Add chapters like RTP, MTP or PYQ, then save links inside them.':'')+'</p>';renderSearch()}
+function renderSearch(){const q=$('lSearch').value.trim().toLowerCase(),box=$('sList');if(!q){box.innerHTML='';return}const r=[];Object.entries(S.links).forEach(([k,arr])=>arr.forEach(l=>{if((l.note+' '+l.url+' '+k).toLowerCase().includes(q))r.push([l,k])}));box.innerHTML=r.length?r.slice(0,50).map(([l,k])=>linkHTML(l,k,1)).join('')+(r.length>50?`<p class="small">Showing 50 of ${r.length}. Refine your search.</p>`:''):'<p class="empty">Nothing found.</p>'}
+function addLinks(){const m=$('lMsg');if(!L.ch){m.textContent='Choose a chapter first.';return}const toks=$('lUrl').value.split(/\s+/).filter(Boolean);if(!toks.length){m.textContent='Paste at least one link.';return}
+const k=curKey(),arr=S.links[k]=S.links[k]||[],note=$('lNote').value.trim();let added=0,bad=0,dup=0,full=0;
+toks.forEach(t=>{const u=normURL(t);if(!u){bad++;return}if(arr.some(x=>x.url===u)){dup++;return}if(arr.length>=MAXL){full++;return}arr.push({id:S.nextId++,url:u,note,done:false,added:today()});added++});
+if(!arr.length)delete S.links[k];
+m.textContent=[added&&added+' saved',dup&&dup+' already saved',bad&&bad+' not a valid link',full&&full+' skipped (100 limit reached)'].filter(Boolean).join(' · ');
+if(added){$('lUrl').value='';$('lNote').value='';persist();renderLinks()}}
+
+/* ---------- State fixes, study log ---------- */
+function norm(){S.extra=S.extra||{};S.notes=S.notes||{};S.selectedChapters=S.selectedChapters||[];S.links=S.links||{};S.otherCh=S.otherCh||[];S.day=S.day||{};S.chk=S.chk||{};Object.keys(S.chk).forEach(k=>{if(k.endsWith('::rev')){if(!S.chk[k+'1'])S.chk[k+'1']=1;delete S.chk[k]}});S.legacy=S.legacy||{};S.mocks=Array.isArray(S.mocks)?S.mocks:[];S.goals=S.goals||[];
+if(!Array.isArray(S.periods)||!S.periods.length)S.periods=[{id:1,label:'CA Foundation attempt',start:today(),end:S.examDate||'2027-01-03'}];
+if(!S.periods.some(x=>x.id===S.activePer))S.activePer=S.periods[0].id;S.nextId=Math.max(S.nextId||1,...S.goals.map(g=>g.id+1),...S.periods.map(x=>x.id+1),1)}
+function importOld(v){const M={A:'Accounting',L:'Business Laws',M:'Quantitative Aptitude',Q:'Quantitative Aptitude',E:'Business Economics'};let d=0,c=0,u=0;norm();
+Object.entries(v.day||{}).forEach(([k,n])=>{if(/^\d{4}-\d{2}-\d{2}$/.test(k)&&typeof n==='number'){S.day[k]=n;d++}});
+Object.entries(v.chk||{}).forEach(([k,val])=>{const m=/^([A-Z])\.(\d+)\.(\w+)$/.exec(k),s=m&&M[m[1]],ch=s&&chapters(s)[+m[2]-1],st=m&&(m[3]==='rev'?'rev1':m[3]);if(val&&ch&&ST.some(x=>x[0]===st)){S.chk[s+'::'+ch+'::'+st]=1;c++}else if(val){S.legacy[k]=val;u++}});
+if(v.mock&&Object.keys(v.mock).length)S.legacy.mock=v.mock;return `Imported ${d} study days and ${c} checklist ticks`+(u?`; ${u} unrecognised items kept safely in your backup`:'')+'.'}
+const ST=[['lec','Lecture'],['notes','Notes'],['rev1','Revision 1'],['rev2','Revision 2'],['rev3','Revision 3']];
+let R={from:addDays(today(),-13),to:today()};
+const hh=v=>String(+(+v).toFixed(1));
+function showHrs(){const d=$('hDate').value||today();$('hVal').value=S.day[d]??'';const t=today();
+let w=0;for(let k=0;k<7;k++)w+=S.day[addDays(t,-k)]||0;
+$('hStat').textContent=`Last 7 days: ${hh(w)} h · All time: ${hh(Object.values(S.day).reduce((a,b)=>a+b,0))} h`;
+$('rFrom').value=R.from;$('rTo').value=R.to;
+const n=Math.min(730,Math.round((parse(R.to)-parse(R.from))/864e5)+1),days=Array.from({length:n},(_,k)=>addDays(R.from,k)),vals=days.map(x=>S.day[x]||0),tot=vals.reduce((a,b)=>a+b,0),bi=vals.indexOf(Math.max(...vals));
+$('rSum').innerHTML=[[hh(tot)+' h','Total'],[hh(tot/n)+' h','Average per day'],[vals.filter(v=>v>0).length+' / '+n,'Days studied'],[tot?hh(vals[bi])+' h':'–',tot?'Best day · '+fmt(days[bi]).replace(/^\w+, /,''):'Best day']].map(x=>`<div><b>${x[0]}</b><span>${x[1]}</span></div>`).join('');
+let bars=days.map((x,j)=>[x,vals[j],fmt(x)]),weekly=n>31;
+if(weekly){bars=[];for(let k=0;k<n;k+=7){const g=vals.slice(k,k+7);bars.push([days[k],g.reduce((a,b)=>a+b,0),fmt(days[k])+' + 6 days'])}}
+const mx=Math.max(1,...bars.map(x=>x[1])),el=$('hBars');el.classList.toggle('dense',bars.length>16);
+el.innerHTML=bars.map(x=>`<div class="bw" title="${x[2]}: ${hh(x[1])} h"><em>${x[1]?hh(x[1]):''}</em><div style="height:${x[1]/mx*70}%"></div><small>${parse(x[0]).getDate()}${weekly||parse(x[0]).getDate()===1?'/'+(parse(x[0]).getMonth()+1):''}</small></div>`).join('');
+$('rNote').textContent=weekly?'Longer than 31 days, so each bar shows one week (labelled with its first day).':'Each bar is one day. The number above it is hours studied.'}
+function renderChk(){$('chk').innerHTML=Object.keys(BASE).map(s=>{const cs=chapters(s),n=cs.reduce((a,c)=>a+ST.filter(x=>S.chk[s+'::'+c+'::'+x[0]]).length,0);
+return `<details class="sub1" data-sub="${esc(s)}" ${openSubs.has(s)?'open':''}><summary><i class="dot" style="background:${COL[s]}"></i>${esc(s)}<span class="cnt">${Math.round(n/(cs.length*ST.length)*100)}% done</span></summary><div class="chs">${cs.map(c=>`<div class="crow"><b>${esc(c)}</b>${ST.map(x=>{const k=s+'::'+c+'::'+x[0];return `<label class="mini"><input type="checkbox" data-c="${esc(k)}" ${S.chk[k]?'checked':''}>${x[1]}</label>`}).join('')}</div>`).join('')}</div></details>`}).join('')}
+function renderMocks(){const a=S.mocks.slice().sort((x,y)=>y.date.localeCompare(x.date)),pc=m=>Math.round(m.score/m.max*100),avg=a.length?Math.round(a.reduce((s,m)=>s+pc(m),0)/a.length):0;
+$('mList').innerHTML=a.length?`<p class="small" style="margin:0">Average: ${avg}% over ${a.length} ${a.length===1?'test':'tests'}</p>`+a.map(m=>`<div class="item"><div class="t"><b>${esc(m.name)}</b><div class="m">${fmt(m.date)} · ${m.score}/${m.max} (${pc(m)}%)</div></div><button class="del" data-act="delmock" data-id="${m.id}" aria-label="Delete test">×</button></div>`).join(''):'<p class="empty">No mock tests logged yet.</p>'}
+function renderLog(){if(!$('hDate').value)$('hDate').value=today();if(!$('mDate').value)$('mDate').value=today();showHrs();renderChk();renderMocks()}
+
+/* ---------- Calendar: link period dates and range selection ---------- */
+let RS={on:false,a:null,b:null};
+function goCal(s){const d=parse(s);cal=new Date(d.getFullYear(),d.getMonth(),1);sel=s}
+function renderRS(){const a=RS.a,b=RS.b;$('rsBtn').textContent=RS.on?'Done':'Select range';$('rsBtn').classList.toggle('on',RS.on);
+$('rsHint').textContent=!RS.on?'Tap Select range, then tap the first and last date on the calendar.':!a?'Tap the first date.':!b?'Now tap the last date (tap the same date again for a single day).':fmt(a,1)+' to '+fmt(b,1);
+const box=$('rsBox');if(!a||!b){box.innerHTML='';return}
+const n=Math.round((parse(b)-parse(a))/864e5)+1,tot=Array.from({length:Math.min(n,730)},(_,k)=>S.day[addDays(a,k)]||0).reduce((s,x)=>s+x,0),gs=S.goals.filter(g=>g.date<=b&&(g.endDate||g.date)>=a),gd=gs.filter(g=>g.done).length;
+box.innerHTML=`<div class="sg"><div><b>${n}</b><span>Days</span></div><div><b>${hh(tot)} h</b><span>Studied</span></div><div><b>${hh(tot/n)} h</b><span>Average per day</span></div><div><b>${gd} / ${gs.length}</b><span>Goals done</span></div></div><div class="row" style="margin-top:12px"><button class="primary" data-act="rsper">Use as preparation period</button><button data-act="rschart">See hours chart</button><button class="ghost" data-act="rsclr">Clear</button></div>`}
+
+load();F.end=endFor('daily',F.start);renderPicker();renderForm();render();
+if('serviceWorker' in navigator&&location.protocol.startsWith('http'))navigator.serviceWorker.register('sw.js').catch(()=>{});
+</script></body></html>
